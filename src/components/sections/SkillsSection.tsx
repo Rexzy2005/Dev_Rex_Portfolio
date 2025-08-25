@@ -57,9 +57,8 @@ export const SkillsSection: React.FC = () => {
 
   const SkillCard: React.FC<{ skill: Skill; index: number; isVisible: boolean }> = ({ skill, index, isVisible }) => (
     <div
-      className={`glass rounded-2xl p-6 space-y-4 transition-all duration-500 hover:scale-105 ${
-        isVisible ? 'animate-fade-in-up' : 'opacity-0'
-      }`}
+      className={`glass rounded-2xl p-6 space-y-4 transition-all duration-500 hover:scale-105 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'
+        }`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="flex items-center space-x-3">
@@ -77,9 +76,8 @@ export const SkillsSection: React.FC = () => {
         {skill.skills.map((item, skillIndex) => (
           <div
             key={item}
-            className={`text-sm text-[var(--color-text-secondary)] p-2 rounded-lg dark:glass-subtle bg-gray-200 border-gray-400 dark:border-[var(--color-glass-border)] ${
-              isVisible ? 'animate-fade-in' : 'opacity-0'
-            }`}
+            className={`text-sm text-[var(--color-text-secondary)] p-2 rounded-lg dark:glass-subtle bg-gray-200 border-gray-400 dark:border-[var(--color-glass-border)] ${isVisible ? 'animate-fade-in' : 'opacity-0'
+              }`}
             style={{ animationDelay: `${index * 100 + skillIndex * 50 + 200}ms` }}
           >
             {item}
@@ -101,13 +99,13 @@ export const SkillsSection: React.FC = () => {
           <div className="inline-flex items-center px-4 py-2">
             <span className="text-3xl font-medium text-[var(--color-accent)]">Expertise</span>
           </div>
-          
+
           <h2 className="text-4xl font-bold text-[var(--color-text-primary)]">
             Skills & Technologies
           </h2>
-          
+
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and soft skills 
+            A comprehensive overview of my technical expertise and soft skills
             developed through years of professional experience.
           </p>
         </div>
@@ -128,6 +126,25 @@ export const SkillsSection: React.FC = () => {
                 />
               ))}
             </div>
+          </div>
+          {/* Additional Info */}
+          <div className="mt-8 glass rounded-xl p-6">
+            <h4 className="font-semibold mb-4">Currently Learning</h4>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {['React Native', 'Three.js', 'Rust', 'Docker'].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-blue-600/10 text-blue-600 rounded-full text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              I believe in continuous learning and staying updated with the latest
+              technologies and best practices in web development.
+            </p>
           </div>
 
           {/* Soft Skills */}

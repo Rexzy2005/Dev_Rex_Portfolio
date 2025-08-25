@@ -140,7 +140,7 @@ export const ContactSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className={`${isVisible ? 'animate-slide-in-left' : ''}`}>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="mb-6 space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -227,6 +227,31 @@ export const ContactSection: React.FC = () => {
               )} */}
             </form>
 
+            {/* Social Links */}
+            <div className="row-span-2 glass rounded-2xl p-6 space-y-6">
+              <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
+                Connect With Me
+              </h3>
+
+              <div className="grid grid-cols-2 gap-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className={`flex items-center space-x-3 p-3 rounded-lg dark:glass-subtle border border-[var(--color-glass-border)] hover:bg-[var(--color-accent)]/10 transition-colors ${isVisible ? 'animate-fade-in' : ''
+                      }`}
+                    style={{ animationDelay: `${index * 100 + 600}ms` }}
+                  >
+                    <social.icon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <div>
+                      <div className="text-sm text-[var(--color-text-secondary)]">{social.label}</div>
+                      <div className="text-xs text-[var(--color-text-secondary)]">{social.username}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
             {/* modal */}
             {/* <Modal 
               isOpen={modal.isOpen}
@@ -281,30 +306,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
           </div>
-          {/* Social Links */}
-          <div className="glass rounded-2xl p-6 space-y-6">
-            <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
-              Connect With Me
-            </h3>
 
-            <div className="grid grid-cols-2 gap-3">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className={`flex items-center space-x-3 p-3 rounded-lg dark:glass-subtle border border-[var(--color-glass-border)] hover:bg-[var(--color-accent)]/10 transition-colors ${isVisible ? 'animate-fade-in' : ''
-                    }`}
-                  style={{ animationDelay: `${index * 100 + 600}ms` }}
-                >
-                  <social.icon className="w-5 h-5 text-[var(--color-accent)]" />
-                  <div>
-                    <div className="text-sm text-[var(--color-text-secondary)]">{social.label}</div>
-                    <div className="text-xs text-[var(--color-text-secondary)]">{social.username}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Footer */}

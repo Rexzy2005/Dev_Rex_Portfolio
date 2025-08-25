@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
                 </p>
                 
                 <p>
-                  I specialize in React, TypeScript, and modern CSS frameworks, always staying 
+                  I specialize in React, JavaScript, and modern CSS frameworks, always staying 
                   up-to-date with the latest technologies and best practices. My goal is to bridge 
                   the gap between design and functionality, creating products that are both 
                   beautiful and performant.
