@@ -7,7 +7,6 @@ import { ProjectsSection } from './components/sections/ProjectsSection';
 // import { CaseStudiesSection } from './components/sections/CaseStudiesSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { ContactSection } from './components/sections/ContactSection';
-import { Skills } from './components/sections/Skills';
 
 export default function App() {
   return (

@@ -44,7 +44,9 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center bg-[#1F2937] dark:bg-transparent rounded-md">
             <div className="h-10 w-[100px]">
+              <a href="#hero">
                 <img src={logo} className='w-full h-full object-cover' />
+              </a>
             </div>
           </div>
 

@@ -6,9 +6,9 @@ export const AboutSection: React.FC = () => {
   const [ref, isVisible] = useScrollReveal(0.3);
 
   const stats = [
-    { icon: Code, label: 'Projects Completed', value: '50+' },
-    { icon: Coffee, label: 'Cups of Coffee', value: '1.2K+' },
-    { icon: Calendar, label: 'Years Experience', value: '3+' },
+    { icon: Code, label: 'Projects Completed', value: '10+' },
+    { icon: Coffee, label: 'Cups of Coffee', value: '100+' },
+    { icon: Calendar, label: 'Years Experience', value: '2+' },
     { icon: MapPin, label: 'Based in', value: 'Nigeria' },
   ];
 
@@ -71,8 +71,8 @@ export const AboutSection: React.FC = () => {
                     style={{ animationDelay: `${index * 100 + 300}ms` }}
                   >
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] p-[1px] mx-auto">
-                      <div className="w-full h-full rounded-full glass-subtle flex items-center justify-center">
-                        <stat.icon className="w-5 h-5 text-[var(--color-accent)]" />
+                      <div className="w-full h-full rounded-full flex items-center justify-center">
+                        <stat.icon className="w-5 h-5 text-white font-bold" />
                       </div>
                     </div>
                     

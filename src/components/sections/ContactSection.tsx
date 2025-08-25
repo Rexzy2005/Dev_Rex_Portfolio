@@ -140,10 +140,10 @@ export const ContactSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className={`${isVisible ? 'animate-slide-in-left' : ''}`}>
-            <form onSubmit={handleSubmit} className="mb-6 space-y-6">
+            <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 mb-6 space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name">Company Name or (yours)</Label>
                   <Input
                     id="name"
                     name="name"
@@ -155,7 +155,7 @@ export const ContactSection: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">Company Email or (personal)</Label>
                   <Input
                     id="email"
                     name="email"
@@ -174,6 +174,7 @@ export const ContactSection: React.FC = () => {
                 <Input
                   id="subject"
                   name="subject"
+                  placeholder="What's this about?"
                   value={formData.subject}
                   onChange={handleInputChange}
                   className="dark:glass-subtle border-[var(--color-glass-border)]"
@@ -186,7 +187,7 @@ export const ContactSection: React.FC = () => {
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder='Enter your message...'
+                  placeholder='Tell me about your project...'
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={6}
@@ -228,7 +229,7 @@ export const ContactSection: React.FC = () => {
             </form>
 
             {/* Social Links */}
-            <div className="row-span-2 glass rounded-2xl p-6 space-y-6">
+            <div className="glass rounded-2xl p-6 space-y-6">
               <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
                 Connect With Me
               </h3>
@@ -264,22 +265,6 @@ export const ContactSection: React.FC = () => {
 
           {/* Contact Info & Resume */}
           <div className={`space-y-8 ${isVisible ? 'animate-slide-in-right' : ''}`}>
-            {/* Resume Download */}
-            <div className="glass rounded-2xl p-6 space-y-4">
-              <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
-                Download Resume
-              </h3>
-              <p className="text-[var(--color-text-secondary)]">
-                Get a comprehensive overview of my experience, skills, and accomplishments.
-              </p>
-              <Button
-                className="w-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] hover:opacity-90 transition-opacity text-base"
-              >
-                <Download className="w-6 h-6 mr-2" />
-                <a href="/remue.pdf" download>Download PDF Resume</a>
-              </Button>
-            </div>
-
             {/* Contact Information */}
             <div className="glass rounded-2xl p-6 space-y-6">
               <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
@@ -304,6 +289,24 @@ export const ContactSection: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {/* Resume Download */}
+            <div className="glass rounded-2xl p-6 space-y-4">
+              <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
+                Download Resume
+              </h3>
+              <p className="text-[var(--color-text-secondary)]">
+                Get a comprehensive overview of my experience, skills, and accomplishments.
+              </p>
+              <Button
+                className="w-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] hover:opacity-90 transition-opacity text-base"
+              >
+                <Download className="w-6 h-6 mr-2" />
+                <a href="/remue.pdf" download>Download PDF Resume</a>
+              </Button>
+            </div>
+
+            
 
           </div>
 

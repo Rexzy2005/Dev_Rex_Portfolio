@@ -3,7 +3,8 @@ import { ExternalLink, Github, Code, Palette, Globe, Smartphone } from 'lucide-r
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { useStaggeredReveal } from '../hooks/useScrollReveal';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+// import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { project1, project2, project3, project4 } from '../assets/images';
 
 interface Project {
   id: number;
@@ -25,7 +26,7 @@ export const ProjectsSection: React.FC = () => {
       id: 1,
       title: 'E-commerce Platform',
       description: 'A modern e-commerce platform with advanced filtering, payment integration, and real-time inventory management.',
-      image: '/api/placeholder/400/300',
+      image: project1,
       stack: ['React', 'JavaScript', 'Tailwind CSS', 'Paystack'],
       category: 'Web App',
       icon: Globe,
@@ -36,7 +37,7 @@ export const ProjectsSection: React.FC = () => {
       id: 2,
       title: 'Design System',
       description: 'Comprehensive design system and component library built for scalability and consistency across products.',
-      image: '/api/placeholder/400/300',
+      image: project2,
       stack: ['React', 'Storybook', 'CSS-in-JS', 'TypeScript'],
       category: 'Design System',
       icon: Palette,
@@ -47,7 +48,7 @@ export const ProjectsSection: React.FC = () => {
       id: 3,
       title: 'Mobile Banking App',
       description: 'Secure mobile banking application with biometric authentication and real-time transaction tracking.',
-      image: '/api/placeholder/400/300',
+      image: project3,
       stack: ['React Native', 'TypeScript', 'Redux', 'Firebase'],
       category: 'Mobile App',
       icon: Smartphone,
@@ -58,7 +59,7 @@ export const ProjectsSection: React.FC = () => {
       id: 4,
       title: 'Developer Portfolio',
       description: 'Interactive portfolio website showcasing modern web development techniques and smooth animations.',
-      image: '/api/placeholder/400/300',
+      image: project4,
       stack: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
       category: 'Portfolio',
       icon: Code,
@@ -107,7 +108,7 @@ export const ProjectsSection: React.FC = () => {
             >
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden">
-                <ImageWithFallback
+                <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
